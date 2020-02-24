@@ -12,7 +12,7 @@ body {
 
 h1 {
     font-family: 'Archivo Black', sans-serif;
-    margin-top: 10rem;
+    margin-top: 5rem;
     line-height: 7rem;
     text-decoration: underline;
     text-transform: initial;
@@ -32,6 +32,10 @@ a, a:hover {
     text-decoration: none;
     color: black;
     cursor: help;
+}
+
+ul {
+    margin-bottom: 5rem;
 }
 
 li {
