@@ -1,23 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Amiri|Archivo+Black&display=swap');
+
 body {
     background: gold;
+    font-family: 'Amiri', serif;
     font-size: 2rem;
+    line-height: 2rem;
     max-width: 800px;
     margin: 0 auto;
+    text-transform: lowercase;
 }
 
 h1 {
+    font-family: 'Archivo Black', sans-serif;
+    margin-top: 10rem;
+    line-height: 7rem;
     text-decoration: underline;
+    text-transform: initial;
 }
 
 p {
     margin-bottom: 2.5rem;
 }
 
+blockquote {
+    margin-left: 3rem;
+    margin-right: 15rem;
+    
+}
+
 a, a:hover {
+    text-decoration: none;
     color: black;
+    cursor: help;
+}
+
+li {
+    list-style: none;
+    text-transform: lowercase;
+    margin-top: 1.5rem;
+    border-bottom: 3px solid black;
+    /* line-height: 4rem; */
 }
 
 #tarot-button {
+font-family: 'Archivo Black', sans-serif;
  background-color: black;
  border: none;
  color: white;
@@ -26,8 +52,9 @@ a, a:hover {
  padding: 2rem;
 }
 
-#add-tarot-text {
-
+.add-tarot-card {
+margin-top: 5rem;
+max-width: 400px;
 }
 
 #card-container {

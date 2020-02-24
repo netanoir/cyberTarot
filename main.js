@@ -1,29 +1,36 @@
-window.addEventListener('DOMContentLoaded', async() => {
+window.addEventListener('DOMContentLoaded', async () => {
 
-    const URL = "https://rws-cards-api.herokuapp.com/api/v1/cards";
+    const $tarotButton = document.getElementById("tarot-button");
+    console.log($tarotButton)
+
+    const URL = "https://raw.githubusercontent.com/dariusk/corpora/master/data/divination/tarot_interpretations.json";
     const apiOptions = { method: "GET" };
     const response = await fetch(URL, apiOptions);
     const result = await response.json();
-    const tarotButton = document.getElementById('tarot-button');
+    console.log(result);
+   
 
-    tarotButton.addEventListener('click', (evt) => {
+    $tarotButton.addEventListener('click', (evt) => {
 
-        // generate random tarot card on click
         var randomCard = Math.floor(Math.random() * 10);
+
         var cardName = document.getElementById("name");
         var cardValue = document.getElementById("value");
-        var cardMeaning = document.getElementById("meaning");
-        var cardReading = document.getElementById("reading");
+        var cardFortune = document.getElementById("fortune");
+        var cardLightMeaning = document.getElementById("light-meaning");
+        var cardShadowMeaning = document.getElementById("shadow-meaning");
 
-        cardName.innerHTML = result.response.docs[randomCard].name;
-        // cardValue.innerHTML = result.response.docs[randomCard].value;
-        // cardMeaning.innerHTML = result.response.docs[randomCard].meaning_up;
-        // cardReading.innerHTML = result.response.docs[randomCard].meaning_rev;
-    
-        const p = document.createElement('p');
-        pp.textContent = "happy valentine's day to you too, love!";
+        cardName.innerHTML = result.tarot_interpretations[randomCard].name;
+        cardValue.innerHTML = result.tarot_interpretations[randomCard].rank;
+        cardFortune.innerHTML = result.tarot_interpretations[randomCard].fortune_telling;
+        cardLightMeaning.innerHTML = result.tarot_interpretations[randomCard].meanings.light;
+        cardShadowMeaning.innerHTML = result.tarot_interpretations[randomCard].meanings.shadow;
 
-        document.body.appendChild(p);
-    
-    }) 
-    })
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+        var bgColor = "rgb(" + r + "," + g + "," + b + ")";
+
+        document.body.style.backgroundColor = bgColor;
+    });
+})
