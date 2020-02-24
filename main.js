@@ -12,7 +12,8 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     $tarotButton.addEventListener('click', (evt) => {
 
-        var randomCard = Math.floor(Math.random() * 60);
+        var numOfCards = 78;
+        var randomCard = Math.floor(Math.random() * numOfCards);
 
         var cardName = document.getElementById("name");
         var cardValue = document.getElementById("value");
