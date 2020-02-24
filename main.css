@@ -18,6 +18,11 @@ h1 {
     text-transform: initial;
 }
 
+h2 {
+    font-family: 'Archivo Black', sans-serif;
+    text-decoration: underline;
+}
+
 p {
     margin-bottom: 2.5rem;
 }
