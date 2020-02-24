@@ -1,0 +1,36 @@
+body {
+    background: gold;
+    font-size: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+p {
+    margin-bottom: 2.5rem;
+}
+
+a, a:hover {
+    color: black;
+}
+
+#tarot-button {
+ background-color: black;
+ border: none;
+ color: white;
+ font-size: 2rem;
+ margin-top: 2rem;
+ padding: 2rem;
+}
+
+#add-tarot-text {
+
+}
+
+#card-container {
+
+}
+
